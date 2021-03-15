@@ -15,7 +15,8 @@ $.ajaxPrefilter(function (option) {
 
         //登录拦截
         option.complete = function (res) {
-            console.log(res.responseJSON);
+            // console.log(res);
+            // console.log(res.responseJSON);
 
             let obj = res.responseJSON;
             if (obj.status == 1 && obj.message === '身份认证失败！') {
